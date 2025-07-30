@@ -1,0 +1,112 @@
+.footer {
+  background-color: #000;
+  padding: 20px 40px;
+  color: #fff;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.leftBlock,
+.centerBlock,
+.rightBlock {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.leftBlock .brand {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.leftBlock p {
+  font-size: 14px;
+}
+
+.centerBlock,
+.rightBlock {
+  align-items: center;
+}
+
+.centerBlock .getConnected,
+.rightBlock .socialsTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.centerBlock .contactIcons,
+.rightBlock .socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.contactIcons .icon,
+.socialIcons a {
+  font-size: 24px;
+  color: #fff;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.contactIcons .icon:hover,
+.socialIcons a:hover {
+  color: #1db954;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .leftBlock .brand {
+    font-size: 22px;
+  }
+  .centerBlock .getConnected,
+  .rightBlock .socialsTitle {
+    font-size: 16px;
+  }
+  .contactIcons .icon,
+  .socialIcons a {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+  .leftBlock,
+  .centerBlock,
+  .rightBlock {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftBlock .brand {
+    font-size: 20px;
+  }
+  .centerBlock .getConnected,
+  .rightBlock .socialsTitle {
+    font-size: 14px;
+  }
+  .contactIcons .icon,
+  .socialIcons a {
+    font-size: 20px;
+  }
+  .footer {
+    padding: 15px 20px;
+  }
+}

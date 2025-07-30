@@ -1,0 +1,134 @@
+.teamSection {
+//   background-image: url('/bg.png'); /* фон за всем */
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto 155vh;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    background-size: cover; /* чтобы фон занимал весь экран */
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 10px;
+  }
+}
+
+.teamWrapper {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+/* ✅ Большой контейнер с фото */
+.mainCard {
+  width: 653px;
+  height: 422px;
+  border-radius: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05); /* легкий прозрачный фон */
+  backdrop-filter: blur(8px);
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 20px;
+    padding: 15px;
+  }
+}
+
+/* ✅ Сетка 3x2 */
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    :global(img) {
+      border-radius: 12px;
+      object-fit: cover;
+      max-width: 200px;
+      max-height: 150px;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: #fff; /* белый текст */
+      margin-top: 8px;
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* ✅ Текст справа */
+.teamText {
+  flex: 1;
+  padding: 40px;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff; /* белый текст */
+    text-align: center;
+    line-height: 1.5;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+}

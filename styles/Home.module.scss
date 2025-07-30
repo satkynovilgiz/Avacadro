@@ -1,0 +1,171 @@
+.home {
+  font-family: 'Poppins', sans-serif;
+  color: #fff; /* ВСЕ ТЕКСТЫ БЕЛЫЕ */
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+.mainSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 120px;
+  gap: 50px;
+}
+
+.textBlock {
+  flex: 1;
+  max-width: 600px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #fff;
+    line-height: 1.5;
+  }
+}
+
+.downloadButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: nowrap; /* не переносить кнопки */
+  justify-content: flex-start;
+
+  overflow-x: auto; /* горизонтальный скролл, если надо */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+
+.downloadBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #27ae60;
+  text-decoration: none;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.storeBtn {
+  display: block;
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.imageBlock {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  .heroImage {
+    width: 480px;
+    height: auto;
+    animation: smoothFloat 4s ease-in-out infinite;
+  }
+}
+
+@keyframes smoothFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Адаптация */
+
+/* Большие планшеты и ноуты (1024px и ниже) */
+@media (max-width: 1024px) {
+  .mainSection {
+    gap: 30px;
+  }
+
+  .textBlock h1 {
+    font-size: 54px;
+  }
+}
+
+/* Планшеты и большие телефоны (768px и ниже) */
+@media (max-width: 768px) {
+  .mainSection {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+    padding-top: 80px;
+  }
+
+  .imageBlock {
+    justify-content: center;
+  }
+
+  .heroImage {
+    width: 350px !important;
+  }
+
+  .downloadButtons {
+    justify-content: center;
+    gap: 12px;
+    padding-bottom: 0;
+    overflow-x: visible; /* убираем скролл */
+    flex-wrap: wrap; /* разрешаем переносить кнопки */
+  }
+
+  .storeBtn {
+    width: 140px;
+  }
+
+  .downloadBtn {
+    font-size: 18px;
+  }
+}
+
+/* Телефоны (480px и ниже) */
+@media (max-width: 480px) {
+  .textBlock h1 {
+    font-size: 36px;
+  }
+
+  .textBlock h2 {
+    font-size: 18px;
+  }
+
+  .downloadButtons {
+    gap: 10px;
+  }
+
+  .storeBtn {
+    width: 120px;
+  }
+
+  .downloadBtn {
+    font-size: 16px;
+  }
+}
