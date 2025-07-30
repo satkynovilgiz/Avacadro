@@ -4,6 +4,7 @@ import styles from "../styles/Team.module.scss";
 export default function Team() {
   return (
     <div className={styles.teamSection}>
+      <h1 className={styles.teamTitle}>Meet Our Team</h1>
       <main className={styles.teamWrapper}>
         {/* Левый блок с 6 элементами */}
         <div className={styles.mainCard}>
@@ -81,4 +82,3 @@ export default function Team() {
     </div>
   );
 }
-
